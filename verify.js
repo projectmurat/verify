@@ -7,7 +7,7 @@ const token = urlParams.get('token');
 
 // Sunucuya doğrulama isteği gönder ve sonucu ekrana yazdır
 if (token) {
-    fetch(`http://localhost:3000/verify?token=${token}`)
+    fetch(`http://localhost:3000/api-check-token?token=${token}`)
         .then(response => response.json())
         .then(data => {
             const verificationStatus = document.getElementById('verification-status');
